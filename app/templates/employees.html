@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<section>
+<div class="container">
+	<h2>Employees</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>SNO</th>
+				<th>EMP ID</th>
+				<th>NAME</th>
+				<th>DESIGNATION</th>
+				<th>D O J</th>
+				<th></th>
+				<th></th>
+			</tr>
+
+
+
+		</thead>
+		<tbody>
+        {% for x in data %}
+        <tr>
+				<th>{{ x.pk }}</th>
+				<th>{{ x.emp_id }}</th>
+				<th>{{ x.emp_name }}</th>
+				<th>{{ x.emp_designation }}</th>
+				<th>{{ x.emp_doj }}</th>
+
+				<th></th>
+				<th></th>
+			</tr>
+        {% endfor %}
+
+        </tbody>
+	</table>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+	<div class="card card-body mt-4 mb-4">
+		<h2>Add Employee</h2>
+		<form role="form" method="post" action="">
+
+                {% csrf_token %}
+            {{ form.as_p }}
+<!--			<div class="form-group">-->
+<!--				<label>Employee ID</label>-->
+<!--				<input class="form-control" id="" type="text" name="name" value="">-->
+<!--			</div>-->
+<!--			<div class="form-group">-->
+<!--				<label>Employee Name</label>-->
+<!--				<input class="form-control" type="text" name="surname" value="">-->
+<!--			</div>-->
+<!--			<div class="form-group">-->
+<!--				<label>Employee Designation</label>-->
+<!--				<input class="form-control" type="email" name="email" value="">-->
+<!--			</div>-->
+<!--            <div class="form-group">-->
+<!--				<label>Employee Doj</label>-->
+<!--				<input class="form-control" type="email" name="email" value="">-->
+<!--			</div>-->
+			<div class="form-group">
+				<button type="submit" class="btn btn-danger btn-sm">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+    </section><!-- End About Section -->
+
+
+  </main><!-- End #main -->
+
+
+
+{% endblock %}
